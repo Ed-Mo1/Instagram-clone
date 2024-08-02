@@ -26,13 +26,13 @@ const SuggestedUser = ({ user }: { user: UserType }) => {
   return (
     <Flex w={"full"} justifyContent={"space-between"} alignItems={"center"}>
       <Flex gap={2} alignItems={"center"}>
-        <Link as={RouterLink} to={`/${user?.username}`}>
+        <Link as={RouterLink} to={`/Instagram-clone/${user?.username}`}>
           <Avatar size={"md"} src={user?.profilePictureUrl} />
         </Link>
         <VStack alignItems={"flex-start"} gap={1}>
           <Link
             as={RouterLink}
-            to={`/${user?.username}`}
+            to={`/Instagram-clone/${user?.username}`}
             fontWeight={"bold"}
             fontSize={12}
           >

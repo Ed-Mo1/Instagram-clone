@@ -10,12 +10,12 @@ const Comment = ({ comment }: { comment: any }) => {
   if (isLoading) return <CommentSkeleton />;
   return (
     <Flex gap={4}>
-      <Link to={`/${userProfile?.username}`}>
+      <Link to={`/Instagram-clone/${userProfile?.username}`}>
         <Avatar src={userProfile?.profilePictureUrl} size={"sm"} />
       </Link>
       <Flex direction={"column"}>
         <Flex gap={2} alignItems={"center"}>
-          <Link to={`/${userProfile?.username}`}>
+          <Link to={`/Instagram-clone/${userProfile?.username}`}>
             <Text fontWeight={"bold"} fontSize={12}>
               {userProfile?.username}
             </Text>

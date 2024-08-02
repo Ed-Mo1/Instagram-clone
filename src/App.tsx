@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<PageLayout />}>
+        <Route path="/Instagram-clone/" element={<PageLayout />}>
           <Route
             index={true}
             element={
@@ -18,9 +18,9 @@ const App = () => {
               </ProtectecRoute>
             }
           />
-          <Route path="/:username" element={<Profile />} />
+          <Route path=":username" element={<Profile />} />
         </Route>
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/Instagram-clone/auth" element={<Auth />} />
       </Routes>
     </>
   );

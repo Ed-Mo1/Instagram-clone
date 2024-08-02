@@ -11,7 +11,7 @@ const Auth = () => {
   const { user } = useAppSelector((state) => state.user);
   useLayoutEffect(() => {
     if (user) {
-      navigate("/", { replace: true });
+      navigate("/Instagram-clone/", { replace: true });
     }
   }, [user]);
   return (

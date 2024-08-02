@@ -16,12 +16,12 @@ const Navbar = () => {
           cursor={"pointer"}
         />
         <Flex gap={4}>
-          <Link to="/auth">
+          <Link to="/Instagram-clone/auth">
             <Button colorScheme={"blue"} size={"sm"}>
               Login
             </Button>
           </Link>
-          <Link to="/auth">
+          <Link to="/Instagram-clone/auth">
             <Button variant={"outline"} size={"sm"}>
               Signup
             </Button>

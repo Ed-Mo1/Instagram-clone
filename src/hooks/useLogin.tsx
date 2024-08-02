@@ -39,7 +39,7 @@ const useLogin = (): Login => {
       const data = docSnap.data() as UserType;
       localStorage.setItem("user", JSON.stringify(data));
       dispatch(setUSer(data));
-      navigate(location.state?.from.pathname || "/", { replace: true });
+      navigate(location.state?.from.pathname || "/Instagram-clone/", { replace: true });
       showToast({
         title: "Success",
         message: "Login Successful",

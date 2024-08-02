@@ -8,12 +8,12 @@ const SuggestedUserHeader = () => {
   return (
     <Flex w={"full"} justifyContent={"space-between"} alignItems={"center"}>
       <Flex gap={2} alignItems={"center"}>
-        <Link as={RouterLink} to={`/${user?.username}`}>
+        <Link as={RouterLink} to={`/Instagram-clone/${user?.username}`}>
           <Avatar src={user?.profilePictureUrl} size={"sm"} />
         </Link>
         <Link
           as={RouterLink}
-          to={`/${user?.username}`}
+          to={`/Instagram-clone/${user?.username}`}
           fontSize={12}
           fontWeight={"bold"}
         >

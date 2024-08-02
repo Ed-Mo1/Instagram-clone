@@ -15,7 +15,7 @@ const PostHeader = ({
   return (
     <Flex alignItems={"center"} my={2} justifyContent={"space-between"}>
       <Flex gap={2} alignItems={"center"}>
-        <Link to={`/${userProfile?.username}`}>
+        <Link to={`/Instagram-clone/${userProfile?.username}`}>
           <Avatar src={userProfile?.profilePictureUrl} size={"sm"} />
         </Link>
         <Flex
@@ -24,7 +24,7 @@ const PostHeader = ({
           fontWeight={"bold"}
           gap={{ base: 1, md: 2 }}
         >
-          <Link to={`/${userProfile?.username}`}>
+          <Link to={`/Instagram-clone/${userProfile?.username}`}>
             <Text>{userProfile?.username}</Text>
           </Link>
           <Text fontSize={{ base: "11px", md: "12px" }} color={"gray.500"}>

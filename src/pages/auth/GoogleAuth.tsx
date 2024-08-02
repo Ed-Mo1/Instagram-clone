@@ -29,7 +29,7 @@ const GoogleAuth = () => {
       if (docSnap.exists()) {
         dispatch(setUSer(docSnap.data() as UserType));
         localStorage.setItem("user", JSON.stringify(docSnap.data()));
-        navigate(location.state?.from.pathname || "/", { replace: true });
+        navigate(location.state?.from.pathname || "/Instagram-clone/", { replace: true });
         toast({
           title: "Success",
           message: "Login Successful",
@@ -53,7 +53,7 @@ const GoogleAuth = () => {
       await setDoc(userRef, userData);
       dispatch(setUSer(userData));
       localStorage.setItem("user", JSON.stringify(userData));
-      navigate(location.state?.from.pathname || "/", { replace: true });
+      navigate(location.state?.from.pathname || "/Instagram-clone/", { replace: true });
       toast({
         title: "Success",
         message: "Login Successful",

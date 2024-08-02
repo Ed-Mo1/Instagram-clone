@@ -70,7 +70,7 @@ const ProfileHeader = ({ currentUser }: { currentUser: UserType }) => {
                 size={{ base: "xs", md: "sm" }}
                 onClick={() => {
                   if (!user) {
-                    navigate("/auth", {
+                    navigate("/Instagram-clone/auth", {
                       replace: true,
                       state: { from: location.pathname },
                     });

@@ -4,7 +4,6 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
-
 const firebaseConfig = {
   apiKey: import.meta.env.REACT_APP_API_KEY,
   authDomain: import.meta.env.REACT_APP_AUTH_DOMAIN,

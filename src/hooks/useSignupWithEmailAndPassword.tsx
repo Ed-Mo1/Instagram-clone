@@ -93,7 +93,7 @@ const useSignupWithEmailAndPassword = (): Signup => {
       await setDoc(userRef, userData);
       dispatch(setUSer(userData));
       localStorage.setItem("user", JSON.stringify(userData));
-      navigate(location.state?.from || "/", { replace: true });
+      navigate(location.state?.from || "/Instagram-clone/", { replace: true });
       showToast({
         title: "Success",
         message: "User created successfully",

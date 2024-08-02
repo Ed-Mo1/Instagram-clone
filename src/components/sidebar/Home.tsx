@@ -14,7 +14,7 @@ const Home = () => {
 		>
 			<Link
 				display={"flex"}
-				to={"/"}
+				to={"/Instagram-clone/"}
 				as={RouterLink}
 				alignItems={"center"}
 				gap={4}

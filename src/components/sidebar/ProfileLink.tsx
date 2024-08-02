@@ -16,7 +16,7 @@ const ProfileLink = () => {
     >
       <Link
         display={"flex"}
-        to={`/${user?.username}`}
+        to={`/Instagram-clone/${user?.username}`}
         as={RouterLink}
         alignItems={"center"}
         gap={4}
