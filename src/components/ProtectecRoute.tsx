@@ -12,7 +12,7 @@ const ProtectecRoute = ({ children }: { children: React.ReactNode }) => {
   useLayoutEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (!user) {
-        navigate("/auth", { replace: true });
+        navigate("/Instagram-clone/auth", { replace: true });
       } else {
         dispatch(
           setUSer(
