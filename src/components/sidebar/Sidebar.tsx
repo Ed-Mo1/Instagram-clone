@@ -20,7 +20,7 @@ const Sidebar = () => {
 			px={{ base: 2, md: 4 }}
 		>
 			<Flex direction={"column"} gap={10} w='full' height={"full"}>
-				<Link to={"/"} as={RouterLink} pl={2} display={{ base: "none", md: "block" }} cursor='pointer'>
+				<Link to={"/Instagram-clone/"} as={RouterLink} pl={2} display={{ base: "none", md: "block" }} cursor='pointer'>
 					<InstagramLogo />
 				</Link>
 				<Link
@@ -35,7 +35,7 @@ const Sidebar = () => {
 					w={10}
 					cursor='pointer'
 				>
-					<InstagramMobileLogo />
+					<InstagramMobileLogo  />
 				</Link>
 				<Flex direction={"column"} gap={5} cursor={"pointer"}>
 					<SidebarItems />
