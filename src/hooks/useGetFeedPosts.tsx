@@ -14,6 +14,7 @@ const useGetFeedPosts = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const getPosts = async (): Promise<void> => {
+    setLoading(true);
     try {
       const q = query(
         collection(db, "posts"),

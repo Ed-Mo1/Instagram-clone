@@ -3,17 +3,7 @@ import authImg from "../../../public/auth.png";
 import AuthForm from "../../components/AuthForm";
 import playstoreImg from "../../../public/playstore.png";
 import applestoreImg from "../../../public/microsoft.png";
-import { useLayoutEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAppSelector } from "../../hooks/useRedux";
 const Auth = () => {
-  const navigate = useNavigate();
-  const { user } = useAppSelector((state) => state.user);
-  useLayoutEffect(() => {
-    if (user) {
-      navigate("/Instagram-clone/", { replace: true });
-    }
-  }, [user]);
   return (
     <Flex minH={"100vh"} justifyContent={"center"} alignItems={"center"} px={4}>
       <Container maxWidth={"container.md"}>

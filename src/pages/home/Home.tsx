@@ -1,7 +1,6 @@
 import { Box, Container, Flex } from "@chakra-ui/react";
 import FeedPosts from "../../components/feedposts/FeedPosts";
 import SuggestedUsers from "../../components/suggestedUsers/SuggestedUsers";
-// import SuggestedUsers from "../../components/suggestedUsers/SuggestedUsers";
 
 const Home = () => {
   return (

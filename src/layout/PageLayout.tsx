@@ -24,7 +24,7 @@ const PageLayout = () => {
 
 export default PageLayout;
 
-const PageLayoutSpinner = () => {
+export const PageLayoutSpinner = () => {
   return (
     <Flex
       flexDir="column"
