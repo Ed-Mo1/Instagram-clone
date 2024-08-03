@@ -4,7 +4,13 @@ import { Link as RouterLink } from "react-router-dom";
 import { UserType } from "../../types/userType";
 import useFollowUser from "../../hooks/useFollowUser";
 
-const SuggestedUser = ({ user ,onClose}: { user: UserType,onClose:()=>void }) => {
+const SuggestedUser = ({
+  user,
+  onClose,
+}: {
+  user: UserType;
+  onClose?: () => void;
+}) => {
   const { followUser, isFollowing, loading } = useFollowUser(user);
   const [numFollowers, setNumFollowers] = useState<number>(
     user?.followers.length
@@ -26,12 +32,16 @@ const SuggestedUser = ({ user ,onClose}: { user: UserType,onClose:()=>void }) =>
   return (
     <Flex w={"full"} justifyContent={"space-between"} alignItems={"center"}>
       <Flex gap={2} alignItems={"center"}>
-        <Link onClick={onClose} as={RouterLink} to={`/Instagram-clone/${user?.username}`}>
+        <Link
+          onClick={onClose ? () => onClose() : () => {}}
+          as={RouterLink}
+          to={`/Instagram-clone/${user?.username}`}
+        >
           <Avatar size={"md"} src={user?.profilePictureUrl} />
         </Link>
         <VStack alignItems={"flex-start"} gap={1}>
           <Link
-            onClick={onClose}
+            onClick={onClose ? () => onClose() : () => {}}
             as={RouterLink}
             to={`/Instagram-clone/${user?.username}`}
             fontWeight={"bold"}
