@@ -16,16 +16,24 @@ import {
 } from "@chakra-ui/react";
 import { SearchLogo } from "../../assets/constants";
 import useSearchUser from "../../hooks/useSearchUser";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SuggestedUser from "../suggestedUsers/SuggestedUser";
-
 const Search = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const searchRef = useRef<HTMLInputElement>(null);
-  const { getUser, loading, user } = useSearchUser();
+  const { getUser, loading, user, setUser } = useSearchUser();
 
+  const [isSearched, setIsSearched] = useState(false);
+
+  useEffect(() => {
+    setIsSearched(false);
+    setUser(null);
+  }, []);
   const handleSearchUser = (e: React.FormEvent<HTMLFormElement>): void => {
+    setIsSearched(false);
+    setUser(null);
     e.preventDefault();
+    setIsSearched(true);
     getUser((searchRef.current as HTMLInputElement).value);
   };
 
@@ -78,9 +86,11 @@ const Search = () => {
                 </Button>
               </Flex>
             </form>
-            {user && <SuggestedUser user={user} />}
+            {user && <SuggestedUser onClose={onClose} user={user} />}
 
-            {!user && <Box textAlign={"center"}>No user found</Box>}
+            {!user && isSearched && (
+              <Box textAlign={"center"}>No user found</Box>
+            )}
           </ModalBody>
         </ModalContent>
       </Modal>
